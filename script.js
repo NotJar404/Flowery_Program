@@ -1,15 +1,5 @@
 onload = () => {
   document.body.classList.remove("container");
-
-  const popup = document.getElementById("popup");
-
-  // Show popup automatically
-  popup.style.display = "flex";
-
-  // Small delay so animation triggers properly
-  setTimeout(() => {
-    popup.classList.add("auto-show");
-  }, 100);
 };
 
 function showMessage() {
@@ -23,16 +13,9 @@ function showMessage() {
 
 function closeMessage() {
   const popup = document.getElementById("popup");
-
-  // Stop shaking
   popup.classList.remove("auto-show");
-
   popup.style.display = "none";
 }
-
-/* =========================
-   FIRELIES GENERATOR
-========================= */
 
 const container = document.querySelector(".fireflies");
 const numberOfFireflies = 70;
