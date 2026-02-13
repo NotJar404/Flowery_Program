@@ -1746,3 +1746,51 @@ mask-image: linear-gradient(135deg, #159faa 0%, #159faa 40%, transparent 60%, tr
 .message-box button:hover {
   background: #f72585;
 }
+
+.fireflies {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.firefly {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #e0aaff 0%, #b84dff 40%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 6px #c266ff,
+    0 0 12px #9933ff,
+    0 0 18px #7a00cc;
+  opacity: 0;
+  animation: flicker 2s infinite alternate ease-in-out;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) translateX(0);
+  }
+  100% {
+    transform: translateY(-10vh) translateX(50px);
+  }
+}
+
+@keyframes flicker {
+  0% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+.firefly:nth-child(1) { left: 10%; animation-duration: 12s; }
+.firefly:nth-child(2) { left: 25%; animation-duration: 9s; }
+.firefly:nth-child(3) { left: 40%; animation-duration: 14s; }
+.firefly:nth-child(4) { left: 55%; animation-duration: 11s; }
+.firefly:nth-child(5) { left: 70%; animation-duration: 13s; }
+.firefly:nth-child(6) { left: 80%; animation-duration: 10s; }
+.firefly:nth-child(7) { left: 35%; animation-duration: 15s; }
+.firefly:nth-child(8) { left: 60%; animation-duration: 8s; }
