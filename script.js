@@ -1,12 +1,23 @@
 onload = () => {
   document.body.classList.remove("container");
 };
+
 function showMessage() {
-  document.getElementById("popup").style.display = "flex";
+  const popup = document.getElementById("popup");
+  popup.style.display = "flex";
+  
+  // Trigger animation
+  setTimeout(() => {
+    popup.classList.add("show");
+  }, 10);
 }
+
 function closeMessage() {
-  document.getElementById("popup").style.display = "none";
+  const popup = document.getElementById("popup");
+  popup.classList.remove("show");
+  popup.style.display = "none";
 }
+
 const container = document.querySelector(".fireflies");
 
 const numberOfFireflies = 70; // Increase this if you want even more
